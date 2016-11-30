@@ -193,16 +193,6 @@ resources:
       name: { get_param: left_network_name }
       virtual_machine_interface_refs: [{ get_resource: template_left_VirtualMachineInterface }]
       virtual_network_refs: [{ get_resource: template_left_VirtualNetwork }]
-      
-  template_left_instance:
-    type: OS::Nova::Server
-    depends_on: [ template_left_InstanceIp ]
-    properties:
-      name: { get_param: server_left_name }
-      image: { get_param:  image_name }
-      flavor: { get_param: flavor_type }
-      networks:
-        - port: { get_resource: template_left_VirtualMachineInterface }
 
   template_right_VirtualMachineInterface:
     type: OS::ContrailV2::VirtualMachineInterface
