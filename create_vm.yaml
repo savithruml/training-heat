@@ -1,6 +1,6 @@
 heat_template_version: 2015-04-30
 
-description: HOT to create IPAM & Virtual-Network
+description: HOT to create IPAM & Virtual-Network, create & attach a network policy, launch nova instances
 
 parameters:
   ipam_name:
